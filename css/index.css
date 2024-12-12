@@ -1,0 +1,135 @@
+/* Improved CSS for Barcode Scanner and Lookup */
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #f3f4f6, #e9ecef);
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    width: 90%;
+    max-width: 400px;
+    margin: 20px auto;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.container h2 {
+    font-size: 1.8rem;
+    color: #333333;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+
+input {
+    padding: 12px 15px;
+    margin: 15px 0;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: calc(100% - 30px);
+    box-sizing: border-box;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+input:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+button {
+    padding: 12px 20px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 8px;
+    width: 100%;
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background: linear-gradient(135deg, #0056b3, #003d80);
+    transform: scale(1.02);
+}
+
+#scanner {
+    width: 100%;
+    max-height: 55VH;
+    max-width: 90%;
+    margin: 20px auto;
+    border: 2px dashed #007bff;
+    border-radius: 10px;
+    padding: 10px;
+    background: #f9f9f9;
+}
+
+#product-info {
+    margin-top: 20px;
+    text-align: left;
+    font-size: 0.9rem;
+    color: #555555;
+    word-wrap: break-word;
+}
+
+.harmful-ingredients {
+    color: red; 
+}
+
+.neutral-ingredients {
+    color: rgb(255, 149, 0); 
+}
+
+.healthy-ingredients {
+    color: rgb(0, 255, 0);
+}
+
+.uncategorized-ingredients {
+    color: rgb(226, 2, 243);
+}
+
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .container {
+        padding: 20px;
+        border-radius: 10px;
+    }
+
+    input {
+        font-size: 0.9rem;
+    }
+
+    button {
+        font-size: 0.9rem;
+    }
+
+    #scanner {
+        padding: 8px;
+    }
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
